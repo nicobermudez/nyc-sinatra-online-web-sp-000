@@ -16,6 +16,6 @@ class LandmarksController < ApplicationController
     redirect '/landmarks'
   end
 
-  get '/landmarks/:id' do 
+  get '/landmarks/:id' do
   end
 end
