@@ -8,6 +8,7 @@ class LandmarksController < ApplicationController
     erb :'landmarks/index'
   end
 
+  # Show New landmark page so you can create a landmark
   get '/landmarks/new' do
     erb :'/landmarks/new'
   end
