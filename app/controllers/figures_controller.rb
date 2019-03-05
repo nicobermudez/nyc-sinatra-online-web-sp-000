@@ -22,7 +22,7 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     Figure.create(name: params['figure']['name'])
-    redirect '/figures'
+    redirect '/figures/#{@figure.id}'
   end
 
   patch'/figures/:id' do
