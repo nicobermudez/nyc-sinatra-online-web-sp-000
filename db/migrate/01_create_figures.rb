@@ -1,2 +1,2 @@
-class CreateFigures < ActiveRecord::Migration 
+class CreateFigures < ActiveRecord::Migration
 end
