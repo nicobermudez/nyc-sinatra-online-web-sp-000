@@ -33,5 +33,6 @@ class LandmarksController < ApplicationController
   end
 
   post 'landmarks/:id' do
+    @landmark = Landmark.find(params[:id])
   end
 end
