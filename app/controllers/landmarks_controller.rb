@@ -27,6 +27,7 @@ class LandmarksController < ApplicationController
   end
 
   # View form to edit landmark by ID
-  get '/landmarks/:id/edit'
-end
+  get '/landmarks/:id/edit' do
+    
+  end
 end
