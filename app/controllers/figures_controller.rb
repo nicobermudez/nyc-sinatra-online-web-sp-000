@@ -25,7 +25,7 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     Figure.create(name: params['figure']['name'])
-    redirect '/landmarks'
+    redirect '/figures'
   end
 
 
