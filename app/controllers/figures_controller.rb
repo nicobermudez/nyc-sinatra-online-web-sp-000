@@ -24,7 +24,7 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
-    Figure.create(name: params['landmark']['name'], year_completed: params['landmark']['year_completed'])
+    Figure.create(name: params['figure']['name'], year_completed: params['landmark']['year_completed'])
     redirect '/landmarks'
   end
 
