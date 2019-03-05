@@ -7,7 +7,6 @@
   <tr>
     <% @figures.each do |figure| %>
       <td align="center"><a href="/figures/<%= figure.id%>"><%=figure.name%></a></td>
-      <td align="center"><%= figure.year_completed %></td>
       <td align="center"><%= figure.title %></td>
       <td align="center"><%= figure.landmark%></td>
     </tr>
