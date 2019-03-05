@@ -2,7 +2,7 @@ class FiguresController < ApplicationController
   # add controller methods
 
   get '/figures' do
-    @figures = Figure.all
+    @figure = Figure.all
     erb :'figures/index'
   end
 
@@ -11,12 +11,12 @@ class FiguresController < ApplicationController
   end
 
   get '/figures/:id' do
-    @figures = Figure.find(params[:id])
+    @figure = Figure.find(params[:id])
     erb :'figures/show'
   end
 
   get '/figures/:id/edit' do
-    @figures = Figure.find(params[:id])
+    @figure = Figure.find(params[:id])
     erb :'figures/edit'
   end
 
