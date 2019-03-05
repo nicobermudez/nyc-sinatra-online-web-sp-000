@@ -1,7 +1,7 @@
 class LandmarksController < ApplicationController
   # add controller methods
 
-  # Landing page for landmarks, allows you to view all landmarks
+  # View landing page for landmarks, allows you to view all landmarks
   get '/landmarks' do
     @landmarks = Landmark.all
     @figures = Figure.all
