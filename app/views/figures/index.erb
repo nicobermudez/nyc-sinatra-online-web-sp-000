@@ -3,6 +3,7 @@
 <table>
   <th>Name</th>
   <th>Title</th>
+  <th>Landmark</th>
   <tr>
     <% @landmarks.each do |landmark| %>
       <td align="center"><a href="/landmarks/<%= landmark.id%>"><%=landmark.name%></a></td>
