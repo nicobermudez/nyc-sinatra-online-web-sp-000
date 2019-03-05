@@ -22,9 +22,9 @@ class FiguresController < ApplicationController
 
   post '/figures/:id' do
     @figure = Figure.find(params[:id])
-    @landmark.name = params['landmark']['name']
-    @landmark.year_completed = params['landmark']["year_completed"]
-    @landmark.save
+    @figure.name = params['figure']['name']
+    @figure.year_completed = params['figure']["year_completed"]
+    @figure.save
 
     redirect to "/landmarks/#{@landmark.id}"
   end
