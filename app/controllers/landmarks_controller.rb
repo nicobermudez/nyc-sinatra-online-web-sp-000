@@ -13,13 +13,6 @@ class LandmarksController < ApplicationController
     erb :'/landmarks/new'
   end
 
-
-  # Redirect and collect new landmark info
-  post '/landmarks' do
-    Landmark.create(name: params['landmark']['name'], year_completed: params['landmark']['year_completed'])
-    redirect '/landmarks'
-  end
-
   # Display single landmark by ID
   get '/landmarks/:id' do
     @landmark = Landmark.find(params[:id])
@@ -39,5 +32,11 @@ class LandmarksController < ApplicationController
     @landmark.save
 
     redirect to "/landmarks/#{@landmark.id}"
+  end
+
+  # Redirect and collect new landmark info
+  post '/landmarks' do
+    Landmark.create(name: params['landmark']['name'], year_completed: params['landmark']['year_completed'])
+    redirect '/landmarks'
   end
 end
