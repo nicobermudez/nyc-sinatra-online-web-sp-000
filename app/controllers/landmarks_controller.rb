@@ -29,5 +29,6 @@ class LandmarksController < ApplicationController
   # View form to edit landmark by ID
   get '/landmarks/:id/edit' do
     @landmark = Landmark.find(params[:id])
+    erb :'landmarks/edit'
   end
 end
