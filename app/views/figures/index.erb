@@ -1,12 +1,8 @@
 <h2>All Figures</h2>
 
-<!-- add content here -->
-
-
-
 <table>
   <th>Name</th>
-  <th>Year Completed</th>
+  <th>Title</th>
   <tr>
     <% @landmarks.each do |landmark| %>
       <td align="center"><a href="/landmarks/<%= landmark.id%>"><%=landmark.name%></a></td>
