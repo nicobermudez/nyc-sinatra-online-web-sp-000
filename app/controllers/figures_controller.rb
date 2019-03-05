@@ -1,6 +1,4 @@
 class FiguresController < ApplicationController
-  # add controller methods
-
   get '/figures' do
     @figures = Figure.all
     erb :'figures/index'
@@ -11,12 +9,12 @@ class FiguresController < ApplicationController
   end
 
   get '/figures/:id' do
-    @figures = Figure.find(params[:id])
+    @figure = Figure.find(params[:id])
     erb :'figures/show'
   end
 
   get '/figures/:id/edit' do
-    @figures = Figure.find(params[:id])
+    @figure = Figure.find(params[:id])
     erb :'figures/edit'
   end
 
@@ -34,8 +32,8 @@ class FiguresController < ApplicationController
     redirect to "/figures/#{@figure.id}"
   end
 
-  patch'/figures/:id' do
-    @figure = Figure.find(params[:id])
+  patch '/figures/:id' do
+    @figure = Figure.find_by_id(params[:id])
     @figure.update(params[:figure])
     unless params[:title][:name].empty?
       @figure.titles << Title.create(params[:title])
@@ -46,9 +44,4 @@ class FiguresController < ApplicationController
     @figure.save
     redirect to "/figures/#{@figure.id}"
   end
-
-
-
-
-
 end
