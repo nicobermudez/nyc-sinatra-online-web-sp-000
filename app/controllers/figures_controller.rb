@@ -23,6 +23,9 @@ class FiguresController < ApplicationController
   post '/figures/:id' do
   end
 
+  post '/figures' do
+  end
+
 
 
 
