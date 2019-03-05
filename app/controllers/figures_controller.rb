@@ -21,7 +21,7 @@ class FiguresController < ApplicationController
   end
 
   post '/figures/:id' do
-    @figure = Landmark.find(params[:id])
+    @figure = Figure.find(params[:id])
     @landmark.name = params['landmark']['name']
     @landmark.year_completed = params['landmark']["year_completed"]
     @landmark.save
