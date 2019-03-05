@@ -20,17 +20,17 @@ class FiguresController < ApplicationController
     erb :'figures/edit'
   end
 
-  post '/figures/:id' do
-    @figure = Figure.find(params[:id])
-    @figure.name = params['figure']['name']
-    @figure.save
-
-    redirect to "/figures/#{@figure.id}"
-  end
-
   post '/figures' do
     Figure.create(name: params['figure']['name'])
     redirect '/figures'
+  end
+
+  patch'/figures/:id' do
+    @figure = Figure.find(params[:id])
+    @figure.update(params[:figure])
+
+    @figure.save
+    redirect to "/figures/#{@figure.id}"
   end
 
 
