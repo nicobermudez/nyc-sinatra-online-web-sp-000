@@ -6,7 +6,7 @@
   <th>Landmark</th>
   <tr>
     <% @figures.each do |figure| %>
-      <td align="center"><a href="/landmarks/<%= landmark.id%>"><%=landmark.name%></a></td>
+      <td align="center"><a href="/figures/<%= landmark.id%>"><%=landmark.name%></a></td>
       <td align="center"><%= landmark.year_completed %></td>
     </tr>
     <% end %>
