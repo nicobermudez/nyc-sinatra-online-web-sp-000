@@ -4,3 +4,10 @@
 
 <a class="button" href="/figures">Figures</a>
 <a class="button" href="/">Home</a>
+
+<table>
+  <th>Name</th>
+  <th>Year Completed</th>
+  <tr>
+    <% @landmarks.each do |landmark| %>
+      <td align="center"><a href="/landmarks/<%= landmark.id%>"
