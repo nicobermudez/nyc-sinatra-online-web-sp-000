@@ -8,7 +8,7 @@ class LandmarksController < ApplicationController
     erb :'landmarks/index'
   end
 
-  # Show New landmark page so you can create a landmark
+  # View New landmark page so you can create a landmark
   get '/landmarks/new' do
     erb :'/landmarks/new'
   end
@@ -20,8 +20,11 @@ class LandmarksController < ApplicationController
     redirect '/landmarks'
   end
 
+  # Display single landmark by ID
   get '/landmarks/:id' do
     @landmark = Landmark.find(params[:id])
     erb :'landmarks/show'
   end
+
+  #
 end
