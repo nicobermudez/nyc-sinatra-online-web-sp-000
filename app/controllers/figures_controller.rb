@@ -6,7 +6,8 @@ class FiguresController < ApplicationController
     erb ':figures/index'
   end
 
-  get '/figures/new'
+  get '/figures/new' do
+  end
 
 
 end
