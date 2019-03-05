@@ -25,7 +25,7 @@ class FiguresController < ApplicationController
     @figure.name = params['figure']['name']
     @figure.save
 
-    redirect to "/landmarks/#{@landmark.id}"
+    redirect to "/figures/#{@landmark.id}"
   end
 
   post '/figures' do
